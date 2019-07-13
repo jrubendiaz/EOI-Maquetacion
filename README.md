@@ -16,8 +16,4 @@ titulo-ejercicio-final
 
 ### Prerrequisitios
 
-Editor de código
-
-```
 Visual Studio Code <a href="https://code.visualstudio.com/"> Descargar </a>
-```
