@@ -29,4 +29,11 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 .container {
   display: flex;
+  height: 100vh;
+  border: 10px solid #bada55;
+  align-items: flex-start;
+}
+
+.box {
+  width: 33.333%;
 }
