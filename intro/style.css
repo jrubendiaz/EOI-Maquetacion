@@ -26,3 +26,24 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .box8 { background:#bdc3c7;}
 .box9 { background:#2ecc71;}
 .box10 { background:#16a085;}
+
+/* Step 1 - Definimos nuestro container como flex*/
+.container {
+  display: flex;
+}
+
+/* Step 2 - ¿Qué pasa si definimos flex como flex 1 */
+.box {
+  flex: 1;
+  /* Aprenderemos más sobre esto pero, básicamente lo que hemos logrado es que el espacio disponible en nuestro contenedor se distribuya en cada uno de nuestros elementos de manera equitativa */
+}
+
+.box3 {
+  /* ¿Qué pasa con el order? no flex-order sino order. Definimos un order a 3 */
+  order: 3;
+  /* ¿Dónde se sitúa el elemento? */
+  order: 0;
+  /* ¿Y ahora? por qué*/
+
+  /* Esto puede llegar a ser muy útil cuando desde el equipo de diseño quieren que la estructura de la web cambie de orden completamente en el diseño mobile */
+}
