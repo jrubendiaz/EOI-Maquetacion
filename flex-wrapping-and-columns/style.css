@@ -31,24 +31,50 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* We start writing out flexbox here. The above is just page setup */
 .container {
   display:flex;
-  flex-wrap:wrap;
-  flex-direction:column;
   border:10px solid goldenrod;
-  height:100vh;
+
+  /* Step 1 - Qué pasa si wrapeamos */
+
+  /* Las propiedades de grow y shrink pasan a afectar a nivel de fila */
+  flex-wrap: wrap;
 }
 
 .box {
-  flex-basis:250px;
-  flex-grow:1;
+  flex-basis:500px;
+  /* step 2 - y si añadimos un flex grow 1 */
+  flex-grow: 1;
 }
 
-
-.box3 {
-  flex-grow:5;
+/* ¿Step 3 - y si añadimos un grow 10 a alguno de los elementos? */
+.box2 {
+  flex-grow: 10;
 }
 
-.box4 {
-  flex-basis:100px;  
+/* Step 4 - ¿Y si cambiamos los ejes a column? */
+.container {
+  flex-direction: column;
+}
+ /* Step 5 - ¿y si añadimos un poco de grow? ¿por qué? */
+.box {
+  flex-basis:auto;
+  flex-grow: 1;
+}
+
+.box2 {
+  flex-grow: 10;
+}
+
+/* Step 6 - Añadimos un alto a nuestro container, ¿qué pasa? */
+.container {
+  min-height: 100vh;
+}
+
+/* Step 7 - Y si en vez de min le aplicamos height directamente y a nuestros elementos le damos un basis - recuerda que está wrapeado? */
+.container {
+  height: 100vh;
+}
+.box {
+  flex-basis: 200px;
 }
 
 
