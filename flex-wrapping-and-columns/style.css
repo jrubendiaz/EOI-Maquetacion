@@ -32,7 +32,6 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .container {
   display:flex;
   flex-wrap:wrap;
-  flex-direction:column;
   border:10px solid goldenrod;
   height:100vh;
 }
@@ -48,7 +47,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 
 .box4 {
-  flex-basis:100px;  
+  flex-basis:100px;
 }
 
 
