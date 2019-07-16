@@ -29,4 +29,20 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 .container {
   display: flex;
+  border: 10px solid #BADA55;
+  height: 100vh;
+
+  /* Step 1 - Vamos a hacer que nuestros elementos se distribuyan por toda la pantalla */
+  flex-wrap: wrap;
+
+  /* ¿Cómo distribuímos nuestros elementos con espacio entre ellos? */
+  align-content: space-between;
+  align-content: space-around;
+  align-content: center;
+  align-content: flex-end;
+  align-content: flex-start;
+}
+
+.box {
+  width: 33.33333%;
 }
