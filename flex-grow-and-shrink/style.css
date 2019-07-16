@@ -32,13 +32,25 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .container {
   display:flex;
 }
-
+  /* Como dividimos el espacio cuando tenemos espacio extra disponible */
+  /* flex-grow: 10; */
+  /* Cuanto de mi espacio voy a ceder a los demás cuando no haya espacio suficiente */
+  /* flex-shrink: 5; */
+  /* Antes de comenzar a crecer o decrecer, ¿cuanto debo medir? */
+  /* flex-basis: 400px; */
 .box1 {
-  flex:10 5 400px;
+  flex-basis: 400px;
+  /* Que pasa si añadimos un flex-grow 1 */
+  flex-grow: 4;
+  /* Y si a ambos le ponemos flex-shrink */
+  flex-shrink: 1;
+  /* Y si quitamos los shrink y ponemos el navegador a 800px */
 }
 
 .box2 {
-  flex:1 1 400px;
+  flex-basis: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 
