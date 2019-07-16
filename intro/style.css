@@ -29,4 +29,30 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 .container {
   display: flex;
+  border: 10px solid #da0463;
+
+  /* Step 1 - ¿qué pasa si asignamos un alineamiento vertical center? */
+  align-items: center;
+  /* Al no tener un alto asignado, nuestro contenedor sólo va a ocupar el espacio que requieren nuestros elementos */
+
+  /* Step 2 - ¿Qué pasa si nuestro container es más grande? */
+  min-height: 100vh;
+
+  /* Step 3 - ¿Qué diferencia hay ahora? */
+  align-items: baseline;
+
+  /* Step 4 - y, ¿ahora? */
+  flex-direction: column;
+}
+
+.box1 {
+  font-size: 12px;
+}
+
+.box4 {
+  font-size: 55px;
+}
+
+.box8 {
+  font-size: 80px;
 }
