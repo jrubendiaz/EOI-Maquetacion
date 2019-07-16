@@ -34,5 +34,55 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .container {
   display: flex;
   border: 10px solid #fa004f;
-  height: 100vh;
+  min-height: 100vh;
+  /* Step 1 - ¿Qué pasa cuando nuestros elementos, dentro de un contenedor flex, requieren de un espacio mayor del que les ofrece este contenedor? */
+
+  /* Recordamos que por naturaleza flexbox es flexible, a diferencia de otro tipo de display que hay en css que, por defecto, van a colocar el contenido en diferentes líneas */
+
+  /* Step 3 */
+  flex-wrap: wrap;
+
+  /* Vemos que han pasado dos cosas, ahora los elementos si que ocupan 300 px cada uno y, ¿qué ha pasado con su height?, veíamos que antes cada uno de los elementos tenían un height igual al espacio disponible y, ¿ahora? */
+
+  /* Por defecto, flex va a tratar de estirarse a lo largo del espacio disponible en su contenedor (siempre y cuando hayamos definido un height) */
+
+  /* Lo que ha pasado es que el contenedor flex ha dicho: Vale, tengo que estirar mis items a lo largo de mi espacio pero, tengo que dividirlo entre los 10 items que conforman un total de 4 filas así que, vamos a asignarles el height necesario a cada uno para que podamos estirarnos en todo el espacio. Así que veremos como ahora los items ocupan más espacio del que necesitan (por su contenido) */
+
+  /* Step 4 - Vemos como afecta modificar el wrap-reverse */
+  /* flex-wrap: wrap-reverse; */
+
+  /* Step 6 - ¿Qué pasa si ahora aplicamos column? */
+  /* flex-direction: column; */
+
+  /* Al cambiar el eje principal por el que se construye nuestro layout y, tener el contenido "envuelto" en un elemento con un height definido, el navegador va a ir colocando elementos en el eje principal hasta que se quede sin espacio, en ese momento, generará una nueva columna dónde continuará colocando elementos. */
+
+  /* Step 7 - Cambiamos el height por min-height */
+  /* height: auto;
+  min-height: 100vh; */
+}
+
+/* Step 2 - Vamos a asignarle un valor absoluto de ancho a nuestros 'flex-items' .box */
+.box {
+  width: 300px;
+  /* ¿Miden realmente 300px?, ¿qué ha pasado? ¿mi pantalla mide 3000px de ancho? */
+
+  /* Por su propia naturaleza, flexbox va a tratar de trabajar con el ancho que le asignemos a nuestros elementos, pero, si no es posible, va a distribuir el espacio entre ellos de manera equitativa o, va a basarse en la propiedad flex que veremos más adelante */
+
+  /* Step 5 - Rellenando todo el espacio */
+  width: 33.33333%;
+  /* Esto funciona igual que con otras tecnicas de layout, simplemente vamos a asignar a cada uno de los elementos un tercio del espacio disponible */
+
+  /* Step 8 - ¿Qué pasa si añadimos margin a nuestros flex-items? */
+  /* margin: 10px; */
+
+  /* El margen de los elementos no está incluido en el modelado del propio elemento, por lo que, estamos añadiendo 10 px a cada lado de los elementos, ahora miden 33.3% + 20px, ¿cómo podemos hacer para reflejarlo en su width correctamente? (pista, calc) */
+  /* width: calc(33.3333% - (10px * 2)); */
+
+  /* Step 9 - ¿y que pása con el padding? */
+  padding: 40px;
+
+  /* El padding si está incluído en el modelado del elemento por lo que, no afectará al tamaño final de nuestro item, esto es así, por que dentro de nuestra normalización le hemos dicho que el tamaño de todos nuestros elementos estará definido por el modelo box-sizing: border-box */
+
+  /* Step 10 - ¿y el border? */
+  border: 20px solid #3C294D;
 }
