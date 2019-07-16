@@ -34,6 +34,14 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .container {
   display: flex;
   border: 10px solid #fa004f;
-  display: inline-flex;
-  height: 100vh;
+  display: flex;
+  /* height: 100vh; */
+  /* Step 2 - cambiamos el height a min-height - ¿qué pasa? ¿por qué podría tener esto sentido? */
+  min-height: 100vh;
+  /* Step 2 - Repasamos los conceptos de eje principal y eje secundario/cruzado */
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column-reverse;
+  flex-direction: column;
+
 }
