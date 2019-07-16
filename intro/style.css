@@ -29,4 +29,27 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 .container {
   display: flex;
+
+  /* Justify-content define como se alinean y como se distribuye el espacio en torno al eje principal del layout */
+  /* Por defecto */
+  justify-content: flex-start;
+  /* Los posibles valores */
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+
+  /* Step 1 - Qué pasa si ponemos nuestro flex en column */
+  flex-direction: column;
+  border: 10px solid #3C294D;
+  /* ¿Cuánto mide nuestro container? - Ocupa todo el espacio que necesiten sus hijos */
+
+  /* Para beneficiarnos del justify-content cuando nuestro contenedor es column, debemos definir un height */
+  min-height: 100vh;
+
+  /* Vemos como nuestro contenido sigue siendo más grande que nuestro container, vamos a hacer nuestro contenido más pequeño */
+}
+.box {
+  font-size: 18px;
 }
