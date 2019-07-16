@@ -34,9 +34,18 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 
 .box {
+  /* Step 1  */
+  /* Lo que le estamos diciendo aquí es que, cada uno de los elementos tienen que ocupar la misma proporción del espacio disponible */
   flex:1;
 }
 
 .box2 {
+  /* Step 2 */
+  /* Aqui lo que estamos diciendo es que box2 tendrá que ocupar en proporcion el doble de espacio que los elementos con flex 1 */
   flex:2;
+}
+
+.box5 {
+  flex: 3;
+  /* ¿Qué pasara ahora? - y si tenemos menos espacio del necesario */
 }
