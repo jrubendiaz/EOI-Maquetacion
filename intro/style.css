@@ -32,19 +32,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /* Display property ==> (https://www.w3schools.com/cssref/pr_class_display.asp) */
 .container {
-  /* Step 1 - comprobar que ha pasado en los elementos */
   display: flex;
   border: 10px solid #fa004f;
-
-  /* Comprobamos que, igual que pasa con display block, el container va a ocupar tooooodo el ancho de la pantalla */
-
-  /* Todos los elementos box pasan a ser implícitamente flex-items debido a la relacion de hijo directo con container, no hace falta declararlos de ninguna manera especial, esto sucede de manera implícita */
-
-  /* Step 2 */
   display: inline-flex;
-  /* Comprobamos como ahora el container sólo ocupa el espacio que necesita (el que ocupan sus hijos), su comportamiento es parecido al de inline o, el del elemento span */
-
-  /* Step 3 */
   height: 100vh;
-  /* En el mundo real el alto de nuestro layout va a estar siempre marcado por el espacio que necesita nuestro contenido, no es normal definir un alto absoluto como este */
 }
