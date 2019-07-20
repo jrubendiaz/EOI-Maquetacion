@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify redesign</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="d-flex wrapper">
+    <div class="logo d-flex justify-content-center align-items-center">
+      <img src="img/logo.png" alt="">
+    </div>
+    <div class="search-box">
+      <div class="icon icon--search">
+
+      </div>
+    </div>
+    <div class="user-panel d-flex">
+      <div class="user-panel__notifications">
+        <div class="icon icon--notification"></div>
+      </div>
+      <div class="user-panel__info d-flex align-items-center d-flex">
+          <div class="avatar avatar--circle avatar--user"></div>
+          <div class="selector">
+            <div class="selectio__option">Katie</div>
+          </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="playlist" class="playlist d-flex">
+      <div class="d-flex align-items-center wrapper br--main" id="current-album">
+        <div class="album-image square square--album">
+        </div>
+        <div class="album__info d-flex flex-column justify-content-center wrapper--s">
+          <h3>This is what you came for</h3>
+          <span>By Rihanna - 2018</span>
+          <strong>26 songs</strong>
+          <div class="album__actions d-flex">
+            <button class="bton bton--main">Play All</button>
+            <button class="bton bton--outline-main">Follow</button>
+          </div>
+        </div>
+      </div>
+      <div class="list list--column playlist__list">
+        <div class="list__header bb--main">
+          <h3>Playlist</h3>
+        </div>
+        <div class="list__body list--column__body">
+          <div></div>
+          <div class="active"></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+    <section class="list" id="albums">
+      <div class="list__header d-flex justify-content-between">
+        <ul class="nav-list d-flex">
+          <li class="active">albums</li>
+          <li>playlists</li>
+          <li>artists</li>
+          <li>genders</li>
+        </ul>
+        <div class="nav-list-actions d-flex">
+          <div class="bton bton--main bton--circle icon icon--prev"></div>
+          <div class="bton bton--main icon bton--circle icon--next"></div>
+        </div>
+      </div>
+      <div class="list__body">
+
+      </div>
+    </section>
+    <section class="d-flex" id="player">
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </main>
+</body>
+</html>
